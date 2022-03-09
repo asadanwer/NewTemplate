@@ -4,7 +4,7 @@ const applicationTheme = (color, mode, direction) => ({
   palette: {
     type: mode,
     primary: themePalette(color, mode).palette.primary,
-    secondary: themePalette(color, mode).palette.secondary,
+    secondary: themePalette(color, mode).palette.success,
     action: {
       hover: mode === 'dark' ? 'rgba(80,80,80, 0.9)' : 'rgba(80,80,80, 0.05)',
       hoverOpacity: 0.05,
@@ -96,7 +96,7 @@ const applicationTheme = (color, mode, direction) => ({
         backgroundColor:
           mode === 'dark'
             ? '#292929'
-            : '#FFFFFF'
+            : '#aecdbe'
       },
       rounded: {
         borderRadius: 8,
@@ -312,8 +312,7 @@ const applicationTheme = (color, mode, direction) => ({
     },
     MuiPickersClockPointer: {
       thumb: {
-        boxShadow: `0 1px 10px 0px ${
-          themePalette(color, mode).palette.primary.main
+        boxShadow: `0 1px 10px 0px ${themePalette(color, mode).palette.primary.main
         }`,
       },
     },
@@ -418,7 +417,7 @@ const applicationTheme = (color, mode, direction) => ({
         boxShadow: 'none',
         backgroundColor:
           mode === 'dark'
-            ? themePalette(color, mode).palette.secondary.dark
+            ? themePalette(color, mode).palette.primary.dark
             : themePalette(color, mode).palette.secondary.light,
       },
       title: {

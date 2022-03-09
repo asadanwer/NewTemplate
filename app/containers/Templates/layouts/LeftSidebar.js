@@ -59,7 +59,7 @@ function LeftSidebarLayout(props) {
         <section className={classNames(classes.mainWrap, classes.sidebarLayout)}>
           {titleException.indexOf(history.location.pathname) < 0 && (
             <div className={classes.pageTitle}>
-              <Typography component="h4" variant="h4">
+              <Typography component="h5" variant="h5">
                 {messages[place] !== undefined ? <FormattedMessage {...messages[place]} /> : place}
               </Typography>
               <BreadCrumb separator=" / " theme="light" location={history.location} />

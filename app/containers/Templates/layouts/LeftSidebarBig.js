@@ -4,7 +4,8 @@ import classNames from 'classnames';
 import Fade from '@material-ui/core/Fade';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
-import {
+import
+{
   Header,
   SidebarBig,
   BreadCrumb,
@@ -57,21 +58,21 @@ function LeftSidebarBigLayout(props) {
       />
       <main className={classNames(classes.content, !sidebarOpen ? classes.contentPaddingLeftSm : '')} id="mainContent">
         <section className={classNames(classes.mainWrap, classes.sidebarLayout)}>
-          {titleException.indexOf(history.location.pathname) < 0 && (
+          { titleException.indexOf(history.location.pathname) < 0 && (
             <div className={classes.pageTitle}>
               <Typography component="h4" variant="h4">
-                {messages[place] !== undefined ? <FormattedMessage {...messages[place]} /> : place}
+                { messages[place] !== undefined ? <FormattedMessage {...messages[place]} /> : place }
               </Typography>
               <BreadCrumb separator=" / " theme="light" location={history.location} />
             </div>
-          )}
+          ) }
           { !pageLoaded && (<img src="/images/spinner.gif" alt="spinner" className={classes.circularProgress} />) }
           <Fade
             in={pageLoaded}
             {...(pageLoaded ? { timeout: 700 } : {})}
           >
             <div className={!pageLoaded ? classes.hideApp : ''}>
-              {/* Application content will load here */}
+              {/* Application content will load here */ }
               { children }
             </div>
           </Fade>
